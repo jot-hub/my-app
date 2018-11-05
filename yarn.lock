@@ -178,6 +178,14 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/platform-server@~7.0.0":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-7.0.2.tgz#0b7693c420b22147db98eb333c5497ab8e3f912f"
+  dependencies:
+    domino "^2.1.0"
+    tslib "^1.9.0"
+    xhr2 "^0.1.4"
+
 "@angular/router@~7.0.0":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-7.0.2.tgz#765aa7e03744d53b2c2e06e4b6e190505da47267"
@@ -1834,6 +1842,10 @@ dom-serialize@^2.2.0:
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
+
+domino@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/domino/-/domino-2.1.0.tgz#653ba7d331441113b42e40ba05f24253ec86e02e"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.1"
@@ -6324,6 +6336,10 @@ ws@~3.3.1:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
+
+xhr2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
 
 xml2js@^0.4.17:
   version "0.4.19"
