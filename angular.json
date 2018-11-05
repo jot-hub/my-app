@@ -117,6 +117,19 @@
               ]
             }
           }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "my-app:build",
+            "serverTarget": "my-app:server",
+            "route": "app-shell-path"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "my-app:build:production"
+            }
+          }
         }
       }
     },
