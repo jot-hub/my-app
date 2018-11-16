@@ -3,20 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { DemoMaterialModule } from '../material-module';
+import { HomeComponent } from './home/home.component';
+import { LogsComponent } from './logs/logs.component';
+
+const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'logs', component: LogsComponent }
+    ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, HeaderComponent, FooterComponent, HomeComponent, LogsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatSidenavModule
+    DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

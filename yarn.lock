@@ -96,11 +96,19 @@
     "@angular-devkit/core" "7.0.4"
     rxjs "6.3.3"
 
-"@angular/animations@~7.0.0":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.0.2.tgz#84513e8958b8fb57a35f6e494a0d465d081c7f8d"
+"@angular/animations@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.0.4.tgz#f53fc9f1bce3bf1afe60dcbc08b6863472f519e4"
   dependencies:
     tslib "^1.9.0"
+
+"@angular/cdk@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.0.4.tgz#422c2aec599f0cce0f8ce9ae6656be5b8109a4d0"
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
 
 "@angular/cli@~7.0.4":
   version "7.0.4"
@@ -144,9 +152,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@~7.0.0":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.0.2.tgz#cfb4ae7504473cc2600b24a9c7cfa5d808486cc2"
+"@angular/core@~7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.0.4.tgz#98340a1bdb53f0bbecfcfc9831a7a22a1540d79b"
   dependencies:
     tslib "^1.9.0"
 
@@ -165,6 +173,12 @@
 "@angular/language-service@~7.0.0":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-7.0.2.tgz#3a38fa4419b088f0916f59c41436dd8303108ee4"
+
+"@angular/material@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.0.4.tgz#946de5ca415bd2cb0330f520011e3dd5361654d1"
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~7.0.0":
   version "7.0.2"
@@ -1504,7 +1518,7 @@ copy-webpack-plugin@4.5.4:
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
 
-core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.4:
+core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.7:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -4392,6 +4406,10 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -5040,7 +5058,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@6.3.3, rxjs@^6.1.0, rxjs@~6.3.3:
+rxjs@6.3.3, rxjs@^6.1.0, rxjs@^6.3.3:
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
   dependencies:
@@ -5876,7 +5894,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
