@@ -33,17 +33,23 @@ export class LoginModule {
     console.log(oidcSecurityService);
 
     this.oidcConfigService.load_using_stsServer('https://accounts.google.com');
+    //this.oidcConfigService.load_using_stsServer('https://api.login.yahoo.com');
 
     this.oidcConfigService.onConfigurationLoaded.subscribe(() => {
 
       console.log('LoginModule: Configuration loaded');
 
       let openIDImplicitFlowConfiguration = new OpenIDImplicitFlowConfiguration();
-      openIDImplicitFlowConfiguration.stsServer = 'https://accounts.google.com';
+      openIDImplicitFlowConfiguration.stsServer = 'https://accounts.google.com';      
+      //openIDImplicitFlowConfiguration.stsServer = 'https://api.login.yahoo.com';
       openIDImplicitFlowConfiguration.redirect_url = 'http://localhost:4200/auth-callback';
+      //openIDImplicitFlowConfiguration.redirect_url = 'http://jothi.ahoo.com:4200/auth-callback';
       openIDImplicitFlowConfiguration.client_id = '143513081999-fg4liad58qlqle84kd1ogs6o3nuieuh6.apps.googleusercontent.com';
+      //openIDImplicitFlowConfiguration.client_id = 'dj0yJmk9YThhME11cmo3UVRtJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTEz';
       openIDImplicitFlowConfiguration.response_type = 'id_token token';
+      //openIDImplicitFlowConfiguration.response_type = 'id_token';
       openIDImplicitFlowConfiguration.scope = 'openid email profile';
+      //openIDImplicitFlowConfiguration.scope = 'openid email';
       openIDImplicitFlowConfiguration.post_logout_redirect_uri = 'http://localhost:4200/unauthorized';
       openIDImplicitFlowConfiguration.post_login_route = '/loggedin';
       openIDImplicitFlowConfiguration.forbidden_route = '/forbidden';
