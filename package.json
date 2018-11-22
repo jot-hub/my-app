@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~7.0.4",
     "@angular/platform-server": "~7.0.4",
     "@angular/router": "~7.0.4",
+    "angular-auth-oidc-client": "^8.0.3",
     "core-js": "^2.5.7",
     "rxjs": "^6.3.3",
     "zone.js": "~0.8.26"

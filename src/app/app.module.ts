@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {RouterModule, Routes} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -11,23 +9,29 @@ import { DemoMaterialModule } from '../material-module';
 import { HomeComponent } from './home/home.component';
 import { LogsComponent } from './logs/logs.component';
 
-const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'logs', component: LogsComponent }
-    ];
+import { LoginComponent } from './login/login.component';
+import {LoginModule} from './login.module';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, FooterComponent, HomeComponent, LogsComponent
+    AppComponent, HeaderComponent, FooterComponent, HomeComponent, LogsComponent, LoginComponent, PageNotFoundComponent, AuthCallbackComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    LoginModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor() {
+  }
+}
