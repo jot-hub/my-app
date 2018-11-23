@@ -11,7 +11,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from "@angular/commo
 import { AuthCallbackComponent } from "./auth-callback/auth-callback.component";
 
 const routes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthorizationGuard]  },
+    { path: '', component: HomeComponent  },
     { path: 'logs', component: LogsComponent, canActivate: [AuthorizationGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'auth-callback', component: AuthCallbackComponent },

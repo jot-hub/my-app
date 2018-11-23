@@ -16,18 +16,19 @@ export class AuthorizationGuard implements CanActivate, CanLoad {
         state: RouterStateSnapshot
     ): Observable<boolean> | boolean {
       console.log('AuthorizationGuard: canActivate');  
-      return this.checkUser();
+      return this.checkUser(route.routeConfig.path);
     }
 
     canLoad(state: Route): Observable<boolean> | boolean {
-        return this.checkUser();
+        return this.checkUser(state.path);
     }
 
-    private checkUser(): Observable<boolean> | boolean {
-        if ('/login' !== window.location.pathname) {
-
-          console.log("checkUser: remember redirect to:", window.location.pathname);  
-          this.write('redirect', window.location.pathname);
+    private checkUser(path): Observable<boolean> | boolean {
+      
+        if ('login' !== path) {
+          
+          console.log("checkUser: remember redirect to:", path);  
+          this.write('redirect', path);
         }
           console.log('checkUser: real check');
           
