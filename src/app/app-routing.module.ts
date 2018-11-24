@@ -6,8 +6,6 @@ import { LogsComponent } from './logs/logs.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthorizationGuard } from './auth.guard';
-import {OidcSecurityService} from 'angular-auth-oidc-client';
-import { Location, LocationStrategy, PathLocationStrategy } from "@angular/common";
 import { AuthCallbackComponent } from "./auth-callback/auth-callback.component";
 
 const routes: Routes = [
@@ -27,7 +25,7 @@ const routes: Routes = [
         }
       )
     ],
-    providers: [ AuthorizationGuard, OidcSecurityService ],
+    providers: [ AuthorizationGuard  ],
     exports: [
       RouterModule
     ]
