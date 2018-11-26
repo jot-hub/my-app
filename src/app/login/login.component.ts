@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     
     console.log('LoginComponent: triggering actual authz');
-    this.oidcSecurityService.authorize();
+    this.oidcSecurityService.getIsModuleSetup().subscribe(() => {
+      this.oidcSecurityService.authorize();
+    });    
   }
 
 }
