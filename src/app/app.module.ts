@@ -14,6 +14,7 @@ import {LoginModule} from './login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+import "hammerjs";
 
 @NgModule({
   declarations: [
