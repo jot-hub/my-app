@@ -1,0 +1,26 @@
+<mwl-calendar-week-view
+    precision="minutes"
+    [excludeDays]="excludeDays"
+    [viewDate]="viewDate"
+    [dayStartHour]="9"
+    [dayEndHour]="17"
+    [hourSegments]="6"
+    [hourSegmentTemplate]="ownHourSegmentTemplate">
+  </mwl-calendar-week-view>
+  <ng-template
+      #ownHourSegmentTemplate
+      let-segment="segment"
+      let-locale="locale"
+      let-segmentHeight="segmentHeight"
+      let-isTimeLabel="isTimeLabel">
+      <div
+        class="cal-hour-segment"
+        [style.height.px]="segmentHeight"
+        [ngClass]="segment.cssClass">
+        <ng-container *ngIf="isTimeLabel" >
+          <div class="cal-time"> 
+            {{ ownWeekViewHour(segment.date, 'en', 0) }}
+          </div>
+        </ng-container>  
+      </div>  
+    </ng-template>
