@@ -11,7 +11,8 @@ import { formatDate } from '@angular/common';
   selector: 'app-calendar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  templateUrl: './calendar.component.html'
+  templateUrl: './calendar.component.html',
+  styleUrls: [ './calendar.component.css' ]
 })
 export class CalendarComponent {
 
