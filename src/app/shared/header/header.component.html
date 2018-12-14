@@ -5,7 +5,7 @@
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #snav>
-    <mat-nav-list>
+    <mat-nav-list (click)="snav.close()">
       <a mat-list-item [routerLink]="['/calendar']">Calendar</a>
     </mat-nav-list>
   </mat-sidenav>
