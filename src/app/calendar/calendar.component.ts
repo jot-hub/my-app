@@ -1,10 +1,11 @@
 import {
   Component,
   ChangeDetectionStrategy,
-  ViewEncapsulation
+  ViewEncapsulation,
+  OnInit
 } from '@angular/core';
-import { DAYS_OF_WEEK } from 'angular-calendar';
-import { addMinutes } from 'date-fns';
+import { DAYS_OF_WEEK, CalendarEvent } from 'angular-calendar';
+import { addMinutes, addDays, subDays, addHours } from 'date-fns';
 import { formatDate } from '@angular/common';
 
 @Component({
@@ -13,7 +14,7 @@ import { formatDate } from '@angular/common';
   encapsulation: ViewEncapsulation.None,
   templateUrl: './calendar.component.html',
 })
-export class CalendarComponent {
+export class CalendarComponent implements OnInit {
 
   view: string = 'month';
 
@@ -24,7 +25,29 @@ export class CalendarComponent {
 
   weekStartsOn = DAYS_OF_WEEK.SUNDAY;
 
+  events: CalendarEvent[]
+
   public ownWeekViewHour(date: Date, locale: string): string {
     return formatDate(date, 'h:mm', locale);
+  }
+
+  ngOnInit() {
+
+    this.events = this.getEvents();
+  }
+
+  public getEvents(): CalendarEvent[] {
+
+    return [
+        {
+          title: "Test event",
+          start: new Date('December 17, 2018 10:24:00'),
+          color: {
+            primary: "pink",
+            secondary: "red"
+          },
+          allDay: true
+        }
+    ];
   }
 }
