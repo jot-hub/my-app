@@ -4,7 +4,9 @@ pipeline {
   }
   stages {
     stage {
-      echo 'pipeline triggered'
+      steps {
+        echo 'pipeline triggered'
+      }
     }
   }
 }
