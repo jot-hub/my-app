@@ -2,7 +2,9 @@ pipeline {
   agent {
     dockerfile true
   }
-  stage {
-    echo 'pipeline triggered'
+  stages {
+    stage {
+      echo 'pipeline triggered'
+    }
   }
 }
