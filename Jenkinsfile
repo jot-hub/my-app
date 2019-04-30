@@ -3,7 +3,7 @@ pipeline {
     dockerfile true
   }
   stages {
-    stage {
+    stage('initial') {
       steps {
         echo 'pipeline triggered'
       }
